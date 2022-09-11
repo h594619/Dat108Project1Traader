@@ -1,20 +1,19 @@
-package oppg1;
+package oppg1utkast;
 
 public class SysOutPrintlnJOptionPane {
-	
+
 	private static boolean fortsette = true;
-	
-static void stopp() {
+
+	static void stopp() {
 		fortsette = false;
 	}
-	
+
 	public static void main(String args[]) throws InterruptedException {
+
+		Threads.startInput();
+		Threads.startPrint();
 		
-		while(fortsette) {
-			Threads.startInput();
-			Threads.startPrint();
-		}
-		
+
 	}
 
 }
@@ -25,7 +24,7 @@ Thread t = new Thread(new Runnable() {
 	@Override
     public void run() {
         //System.out.println("Hallo");
-        
+
     }
 });
 t.start();
