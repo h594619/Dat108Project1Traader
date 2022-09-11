@@ -15,7 +15,14 @@ public class TraadInput extends Thread {
 	@Override
 	public void run() {
 		String input;
-		input = JOptionPane.showInputDialog("Skriv inn din melding, 'quit' for å avbryte");
+		while(fortsette) {
+			input = JOptionPane.showInputDialog("Skriv inn din melding, 'quit' for å avbryte");
+			if(input.equals("quit")) {
+				fortsette = false;
+			}
+			melding.setInput(input);
+			
+		}
 		
 	}
 }

@@ -4,7 +4,7 @@ public class Melding {
 	private String input;
 	
 	public Melding(){
-		input = "123";
+		input = "";
 	}
 
 	public String getInput() {
